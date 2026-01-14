@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Bloom</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7a9f7a",
+                        "sage": "#A0B0A0",
+                        "cream": "#FBF8EC",
+                        "charcoal": "#2B2B2B",
+                        "apricot": "#F9B17A",
+                        "background-light": "#ffffff",
+                        "background-dark": "#2e3837",
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Manrope', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .material-symbols-outlined.fill-1 {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-BTerzyEb.js"></script>
+</head>
+<body class="bg-gray-50 text-charcoal">
+    <div id="root"></div>
+</body>
+</html>
