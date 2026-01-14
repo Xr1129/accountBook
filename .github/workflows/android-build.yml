@@ -24,6 +24,14 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
+    - name: Patch Capacitor Java version
+      run: |
+        # npm ci 会重新安装 node_modules，需要重新修补
+        sed -i 's/VERSION_21/VERSION_17/g' node_modules/@capacitor/android/capacitor/build.gradle
+        # 验证修补
+        echo "=== Patched Java version ==="
+        grep -A 2 "compileOptions" node_modules/@capacitor/android/capacitor/build.gradle
+
     - name: Build web app
       run: npm run build
 
