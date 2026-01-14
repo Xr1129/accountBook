@@ -90,7 +90,8 @@ lint/tmp/
 *.hprof
 
 # Cordova plugins for Capacitor
-capacitor-cordova-android-plugins
+# 注意：这个目录需要提交，GitHub Actions 构建需要它
+# capacitor-cordova-android-plugins
 
 # Copied web assets
 app/src/main/assets/public
