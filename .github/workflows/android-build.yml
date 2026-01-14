@@ -44,8 +44,10 @@ jobs:
     - name: Patch Java version in Capacitor module
       run: |
         # 修改 node_modules 中的 Capacitor Android 模块，使用 Java 17
-        sed -i 's/sourceCompatibility JavaVersion.VERSION_21/sourceCompatibility JavaVersion.VERSION_17/g' node_modules/@capacitor/android/capacitor/build.gradle
-        sed -i 's/targetCompatibility JavaVersion.VERSION_21/targetCompatibility JavaVersion.VERSION_17/g' node_modules/@capacitor/android/capacitor/build.gradle
+        sed -i 's/VERSION_21/VERSION_17/g' node_modules/@capacitor/android/capacitor/build.gradle
+        # 验证修补是否成功
+        echo "=== Verifying patch ==="
+        grep -A 2 "compileOptions" node_modules/@capacitor/android/capacitor/build.gradle
 
     - name: Build Debug APK
       run: |
